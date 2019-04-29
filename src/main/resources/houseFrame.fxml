@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="771.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.adkazankov.moscow.control.HouseController">
+   <children>
+      <GridPane layoutX="200.0" layoutY="22.0" prefHeight="146.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Адрес" />
+            <Label text="Год постройки" GridPane.rowIndex="2" />
+            <Label text="Район" GridPane.rowIndex="1" />
+            <Label fx:id="addressLabel" text="Label" GridPane.columnIndex="1" />
+            <Label fx:id="areaLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="yearLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <ListView fx:id="waterTestsList" layoutY="194.0" prefHeight="331.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="194.0" />
+      <Label layoutX="251.0" layoutY="157.0" text="Анализы воды" AnchorPane.leftAnchor="251.0" AnchorPane.topAnchor="157.0" />
+      <Label layoutX="253.0" layoutY="533.0" text="Комментарии" AnchorPane.leftAnchor="253.0" AnchorPane.rightAnchor="253.0" AnchorPane.topAnchor="533.0" />
+      <Label layoutX="7.0" layoutY="693.0" text="Ваш комментарий" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="7.0" />
+      <Button layoutX="24.0" layoutY="744.0" mnemonicParsing="false" onAction="#sendComment" text="Отправить" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="24.0" />
+      <ListView fx:id="commentsList" layoutX="90.0" layoutY="558.0" prefHeight="125.0" prefWidth="600.0" AnchorPane.bottomAnchor="88.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="558.0" />
+      <Label layoutX="7.0" layoutY="719.0" text="Оценка" />
+      <Spinner fx:id="gradeSpinner" editable="true" layoutX="70.0" layoutY="714.0" prefHeight="26.0" prefWidth="59.0" />
+      <TextField fx:id="yourCommentArea" layoutX="137.0" layoutY="688.0" prefHeight="79.0" prefWidth="449.0" />
+   </children>
+</AnchorPane>
